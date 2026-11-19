@@ -2,9 +2,9 @@
 
 A [MagicMirror²](https://github.com/MagicMirrorOrg/MagicMirror) module that shows a Dilbert strip from this calendar day in a random year.
 
-Dilbert is a comic created by Scott Adams. This module is based on [MMM-DailyDilbert](https://github.com/andrecarlucci/MMM-DailyDilbert).
+Dilbert is a comic created by [Scott Adams](https://en.wikipedia.org/wiki/Scott_Adams). This module is based on [MMM-DailyDilbert](https://github.com/andrecarlucci/MMM-DailyDilbert).
 
-Dilbert ended on **2023-03-12**, and dilbert.com no longer publishes a daily strip. This module reads the public archive at [jvarn/dilbert-archive](https://github.com/jvarn/dilbert-archive) (1989–2023). Each year is a JSON file. Dates are `YYYY-MM-DD` keys, and each strip's image is the `originalimageurl` copy on the Wayback Machine. The first strip in the archive is **1989-04-16**.
+Scott died on **January 13, 2026**, and dilbert.com no longer publishes a daily strip. This module reads the public archive at [jvarn/dilbert-archive](https://github.com/jvarn/dilbert-archive) (1989–2023). Each year is a JSON file. Dates are `YYYY-MM-DD` keys, and each strip's image is the `originalimageurl` copy on the Wayback Machine. The first strip in the archive is **1989-04-16**.
 
 The module takes the computer's local month and day, chooses one year in that range that has the same date, and shows that strip. The caption looks like **April 16, 1995**. February 29 is used only in leap years. A year with no strip for that exact date is skipped. The chosen strip stays up until `updateInterval` elapses, then a new year is chosen. If the image URL fails, another year with the same month and day is tried before an error is shown.
 
